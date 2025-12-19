@@ -1,19 +1,23 @@
-import { toast } from "react-toastify";
+import type { AxiosInstance, AxiosResponse } from "axios";
 import config from "../config/config";
 import type { AspNetValidationErrorResponse, CustomErrorResponse } from "../models";
-import axios, { type AxiosInstance, type AxiosResponse } from "axios";
-
+import axios from "axios";
+import { toast } from "react-toastify";
 const DEFAULT_ERROR_MSG = "Lỗi không xác định từ máy chủ!";
 
 /**
  * Loading state handler (set globally)
  */
-let setLoading: (loading: boolean) => void = () => {};
+let setLoading: (loading: boolean) => void = () => { };
 export const setGlobalLoadingHandler = (
   loadingHandler: (loading: boolean) => void
 ) => {
   setLoading = loadingHandler;
 };
+
+/**
+ * Axios instances
+ */
 
 // Default axios instance used for requests not requiring token authorization
 const defaultAxiosInstance: AxiosInstance = axios.create({
@@ -104,17 +108,6 @@ async function handleErrorResponse(error: any): Promise<never> {
 
   const res = error.response;
   let data = res?.data;
-
-  // Handle 401 Unauthorized - token expired
-  if (res?.status === 401) {
-    try {
-        const text = await data.text();
-        data = JSON.parse(text);
-      } catch {
-        toast.error(DEFAULT_ERROR_MSG, { position: "bottom-right" });
-        return Promise.reject(new Error(DEFAULT_ERROR_MSG));
-      }
-  }
 
   // Handle 500 or expired refresh token error code
   if (res?.status === 500 || data?.error?.includes("IDX12401")) {
