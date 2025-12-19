@@ -1,0 +1,475 @@
+/* ===============================
+   1. Tailwind base + utilities
+   =============================== */
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   
+   /* ===============================
+      2. Design Tokens (CSS Variables)
+      =============================== */
+   :root {
+       /* Color Palette - Primary (Indigo) */
+       --color-primary-50: #eef2ff;
+       --color-primary-100: #e0e7ff;
+       --color-primary-200: #c7d2fe;
+       --color-primary-600: #4f46e5;
+       --color-primary-700: #4338ca;
+       
+       /* Color Palette - Neutral (Gray) */
+       --color-gray-50: #f9fafb;
+       --color-gray-100: #f3f4f6;
+       --color-gray-200: #e5e7eb;
+       --color-gray-300: #d1d5db;
+       --color-gray-500: #6b7280;
+       --color-gray-600: #4b5563;
+       --color-gray-700: #374151;
+       --color-gray-800: #1f2937;
+       --color-gray-900: #111827;
+       
+       /* Color Palette - Semantic */
+       --color-error: #dc2626;
+       --color-error-light: #fee2e2;
+       --color-error-dark: #991b1b;
+       --color-warning: #f59e0b;
+       --color-success: #10b981;
+       
+       /* Spacing Scale */
+       --spacing-xs: 0.25rem;  /* 4px */
+       --spacing-sm: 0.5rem;   /* 8px */
+       --spacing-md: 1rem;     /* 16px */
+       --spacing-lg: 1.5rem;   /* 24px */
+       --spacing-xl: 2rem;     /* 32px */
+       --spacing-2xl: 3rem;    /* 48px */
+       
+       /* Border Radius */
+       --radius-sm: 0.375rem;  /* 6px */
+       --radius-md: 0.5rem;    /* 8px */
+       --radius-lg: 0.75rem;   /* 12px */
+       --radius-xl: 1rem;      /* 16px */
+       
+       /* Shadows */
+       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+       --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+       --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+       
+       /* Typography */
+       --font-size-xs: 0.75rem;    /* 12px */
+       --font-size-sm: 0.875rem;   /* 14px */
+       --font-size-base: 1rem;     /* 16px */
+       --font-size-lg: 1.125rem;   /* 18px */
+       --font-size-xl: 1.25rem;    /* 20px */
+       --font-size-2xl: 1.5rem;    /* 24px */
+       --font-size-3xl: 1.875rem;  /* 30px */
+       --font-size-4xl: 2.25rem;   /* 36px */
+       
+       /* Layout */
+       --sidebar-width: 240px;
+       --sidebar-width-md: 220px;
+       --rightbar-width: 300px;
+       --rightbar-width-md: 280px;
+       --topbar-height: 4rem; /* 64px */
+   }
+   
+   /* ===============================
+      3. Global reset
+      =============================== */
+   html,
+   body {
+       margin: 0;
+       padding: 0;
+       height: 100%;
+       overflow-x: hidden;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       color: var(--color-gray-900);
+       background-color: var(--color-gray-100);
+   }
+   
+   /* Root container (React mount point) */
+   #root {
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+   }
+   
+   /* ===============================
+      4. Utility Classes - Components
+      =============================== */
+   
+   /* Button Styles */
+   .btn {
+       @apply px-6 py-3 text-base font-semibold rounded-md transition-colors duration-200 cursor-pointer;
+   }
+   
+   .btn-primary {
+       @apply bg-brand-600 text-white hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+   }
+   
+   .btn-error {
+       @apply bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+   }
+   
+   .btn-secondary {
+       @apply bg-surface-soft text-text-emphasis hover:bg-surface-subtle focus:outline-none focus:ring-2 focus:ring-text-subtle focus:ring-offset-2;
+   }
+   
+   /* Card Styles */
+   .card {
+       @apply bg-surface-base border border-border-subtle rounded-md p-4 shadow-sm;
+   }
+   
+   .card-lg {
+       @apply bg-surface-base border border-border-subtle rounded-xl p-8 shadow-lg;
+   }
+   
+   /* Container Styles */
+   .container-section {
+       @apply bg-surface-base border border-border-subtle p-6 h-full overflow-y-auto;
+   }
+   
+   .container-main {
+       @apply p-6 overflow-y-auto min-w-0 bg-surface-muted;
+   }
+   
+   /* Typography Styles */
+   .text-heading-1 {
+       @apply text-2xl font-semibold text-text-primary border-b border-border-subtle pb-2 mb-6;
+   }
+   
+   .text-heading-2 {
+       @apply text-xl font-semibold text-text-primary;
+   }
+   
+   .text-heading-3 {
+       @apply text-lg font-semibold text-text-primary;
+   }
+   
+   .text-label {
+       @apply block text-xs font-semibold text-text-subtle mb-1;
+   }
+   
+   .text-body {
+       @apply text-sm text-text-secondary;
+   }
+   
+   .text-body-muted {
+       @apply text-sm text-text-subtle;
+   }
+   
+   /* Navigation Styles */
+   .nav-item {
+       @apply py-2 px-3 rounded-md cursor-pointer text-sm mb-0.5 transition-colors duration-150;
+   }
+   
+   .nav-item-default {
+       @apply text-text-muted hover:bg-surface-subtle;
+   }
+   
+   .nav-item-active {
+       @apply bg-brand-50 text-brand-700 font-semibold hover:bg-brand-100;
+   }
+   
+   .nav-item-header {
+       @apply text-text-primary font-semibold flex justify-between items-center;
+   }
+   
+   /* Error Page Styles */
+   .error-page-container {
+       @apply flex h-screen overflow-hidden;
+   }
+   
+   .error-page-content {
+       @apply flex items-center justify-center flex-grow bg-surface-muted;
+   }
+   
+   .error-card {
+       @apply p-8 bg-surface-base rounded-xl shadow-lg max-w-md w-full text-center border border-border-subtle;
+   }
+   
+   .error-heading {
+       @apply text-5xl font-bold text-text-primary mb-4;
+   }
+   
+   .error-title {
+       @apply text-2xl font-semibold text-text-emphasis mb-2;
+   }
+   
+   .error-message {
+       @apply text-lg text-text-muted mb-8;
+   }
+   
+   /* Sidebar Styles */
+   .sidebar {
+       @apply bg-surface-base border-r border-border-subtle p-6 h-full overflow-y-auto;
+   }
+   
+   .sidebar-right {
+       @apply bg-surface-base border-l border-border-subtle p-6 h-full overflow-y-auto;
+   }
+   
+   /* Property Display Styles */
+   .property-item {
+       @apply mb-4;
+   }
+   
+   .property-label {
+       @apply block text-xs font-semibold text-text-subtle mb-1;
+   }
+   
+   .property-value {
+       @apply text-sm font-semibold text-text-primary;
+   }
+   
+   .property-value-mono {
+       @apply text-sm font-mono text-text-primary;
+   }
+   
+   /* Secret Header Styles */
+   .secret-header {
+       @apply flex items-center justify-between mb-6 pb-4 border-b border-border-subtle;
+   }
+   
+   .secret-header-title {
+       @apply flex items-center gap-3;
+   }
+   
+   .secret-header-breadcrumb {
+       @apply text-xl font-semibold text-text-primary m-0;
+   }
+   
+   .secret-header-actions {
+       @apply flex items-center gap-2;
+   }
+   
+   /* Secret Empty State Styles */
+   .secret-empty-state {
+       @apply flex items-center justify-center min-h-[60vh] w-full;
+   }
+   
+   .secret-empty-content {
+       @apply max-w-2xl w-full text-center px-6 py-12;
+   }
+   
+   .secret-empty-title {
+       @apply text-3xl font-bold text-text-primary mb-4;
+   }
+   
+   .secret-empty-description {
+       @apply text-lg text-text-muted mb-2 leading-relaxed;
+   }
+   
+   .secret-empty-subdescription {
+       @apply text-base text-text-subtle mb-8;
+   }
+   
+   .secret-empty-actions {
+       @apply flex flex-col sm:flex-row gap-4 justify-center items-center mt-8;
+   }
+   
+   .secret-empty-button {
+       @apply min-w-[280px] py-4 px-6 text-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center gap-3;
+   }
+   
+   /* Secret No Keys State Styles */
+   .secret-no-keys-state {
+       @apply flex items-center justify-center min-h-[50vh] w-full py-12;
+   }
+   
+   .secret-no-keys-content {
+       @apply flex flex-col items-center justify-center text-center px-6 max-w-md;
+   }
+   
+   .secret-no-keys-icon {
+       @apply mb-8 flex items-center justify-center;
+   }
+   
+   .secret-no-keys-icon-wrapper {
+       @apply p-8 rounded-full bg-surface-muted border-2 border-dashed border-border-subtle;
+   }
+   
+   .secret-no-keys-title {
+       @apply text-2xl font-semibold text-text-emphasis mb-3;
+   }
+   
+   .secret-no-keys-description {
+       @apply text-base text-text-subtle mb-8;
+   }
+   
+   .secret-no-keys-button-wrapper {
+       @apply flex items-center justify-center;
+   }
+   
+   .secret-no-keys-button {
+       @apply focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 px-6 py-3;
+   }
+   
+   /* Workspace Tabs Styles */
+   .workspace-tabs {
+       @apply flex border-b border-border-subtle mb-4;
+   }
+   
+   .workspace-tab {
+       @apply flex-1 px-4 py-2 text-sm font-medium text-center cursor-pointer transition-colors duration-150 border-b-2 border-transparent;
+   }
+   
+   .workspace-tab-default {
+       @apply text-text-muted hover:text-text-primary hover:bg-surface-muted;
+   }
+   
+   .workspace-tab-active {
+       @apply text-brand-600 border-brand-600 bg-brand-50;
+   }
+   
+   /* Button Add Project */
+   .btn-add-project {
+       @apply w-full mb-4 px-4 py-2 text-sm font-semibold text-white bg-brand-600 rounded-md hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 transition-colors duration-150 flex items-center justify-center gap-2;
+   }
+   
+   /* Key Count Badge */
+   .key-count-badge {
+       @apply ml-auto px-2 py-0.5 text-xs font-semibold text-text-muted bg-surface-subtle rounded-full min-w-[20px] text-center;
+   }
+   
+   .nav-item-active .key-count-badge {
+       @apply bg-brand-200 text-brand-700;
+   }
+   
+   /* Group icon animation */
+   .nav-item-header:hover .key-count-badge {
+       @apply bg-surface-soft;
+   }
+   
+   .nav-item-active.nav-item-header:hover .key-count-badge {
+       @apply bg-brand-300;
+   }
+   
+   /* ===============================
+      5. Logo styles
+      =============================== */
+   .logo {
+       height: 6em;
+       padding: 1.5em;
+       will-change: filter;
+       transition: filter 300ms;
+   }
+   
+   .logo:hover {
+       filter: drop-shadow(0 0 2em #646cffaa);
+   }
+   
+   .logo.react:hover {
+       filter: drop-shadow(0 0 2em #61dafbaa);
+   }
+   
+   /* Logo spin animation */
+   @keyframes logo-spin {
+       from {
+           transform: rotate(0deg);
+       }
+   
+       to {
+           transform: rotate(360deg);
+       }
+   }
+   
+   @media (prefers-reduced-motion: no-preference) {
+       a:nth-of-type(2) .logo {
+           animation: logo-spin infinite 20s linear;
+       }
+   }
+   
+   /* ===============================
+      6. Animations
+      =============================== */
+   @keyframes dropdown {
+       0% {
+           opacity: 0;
+           transform: scale(0.95);
+       }
+   
+       100% {
+           opacity: 1;
+           transform: scale(1);
+       }
+   }
+   
+   .animate-dropdown {
+       animation: dropdown 0.2s ease-out forwards;
+   }
+   
+   @keyframes slideUp {
+       0% {
+           opacity: 0;
+           transform: translateY(20px);
+       }
+       100% {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+   
+   /* ===============================
+      7. Forms / Inputs
+      =============================== */
+   /* Disable browser's default password reveal button */
+   input[type="password"]::-ms-reveal,
+   input[type="password"]::-ms-clear {
+       display: none;
+   }
+   
+   input[type="password"]::-webkit-credentials-auto-fill-button {
+       display: none !important;
+   }
+   
+   input[type="password"]::-webkit-strong-password-auto-fill-button {
+       display: none !important;
+   }
+   
+   /* ===============================
+      8. Print styles
+      =============================== */
+   @media print {
+       body * {
+           visibility: hidden;
+       }
+   
+       #export-content,
+       #export-content * {
+           visibility: visible;
+       }
+   
+       #export-content {
+           position: absolute;
+           left: 0;
+           top: 0;
+           width: 100%;
+           min-height: 100vh;
+           background-repeat: repeat-y;
+           background-size: contain;
+           background-position: top center;
+           -webkit-print-color-adjust: exact;
+           print-color-adjust: exact;
+       }
+   }
+   
+   /* ===============================
+      9. Media Queries / Responsiveness
+      =============================== */
+   @media (max-width: 768px) {
+       .sidebar {
+           @apply border-r-0 border-b;
+       }
+       
+       .sidebar-right {
+           @apply border-l-0 border-t;
+       }
+   }
+   
+   /* ===============================
+      10. Legacy / Deprecated (for backward compatibility)
+      =============================== */
+   .read-the-docs {
+       color: var(--color-gray-500);
+   }

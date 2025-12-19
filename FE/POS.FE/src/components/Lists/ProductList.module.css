@@ -1,0 +1,91 @@
+.productListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+  box-sizing: border-box;
+  /* Ensure consistent grid behavior */
+  grid-auto-rows: minmax(300px, auto);
+  align-items: stretch;
+  justify-items: center;
+  /* Prevent layout shifts */
+  contain: layout style;
+}
+
+/* Custom scrollbar for webkit browsers */
+.productListContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.productListContainer::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.productListContainer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.productListContainer::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Container queries for better zoom handling */
+@container (min-width: 1200px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-grid-columns: 5;
+  }
+}
+
+@container (max-width: 1199px) and (min-width: 900px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-grid-columns: 4;
+  }
+}
+
+@container (max-width: 899px) and (min-width: 600px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    max-grid-columns: 3;
+  }
+}
+
+@container (max-width: 599px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    max-grid-columns: 2;
+  }
+}
+
+/* Fallback for browsers without container queries */
+@media (min-width: 1200px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 900px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .productListContainer {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
