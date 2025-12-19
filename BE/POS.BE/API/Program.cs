@@ -24,6 +24,13 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<DBContext>();
+    db.Database.Migrate();
+}
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DBContext>();
     await DbInitializer.SeedAsync(db);
 }
 
@@ -34,7 +41,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll");
+app.UseCors("CorsPolicy");
 
 app.MapHub<NotificationHub>("/api/notificationHub");
 

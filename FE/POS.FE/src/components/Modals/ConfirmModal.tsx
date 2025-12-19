@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Button from "../UICustoms/Button";
 import theme from "../../styles/theme";
 
 interface ConfirmModalProps {

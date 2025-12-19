@@ -1,0 +1,37 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: pos_sqlserver
+    environment:
+      SA_PASSWORD: "StrongPassword@123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "StrongPassword@123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./BE/POS.BE
+      dockerfile: Dockerfile
+    container_name: pos_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlserver
+
+  frontend:
+    build:
+      context: ./FE/POS.FE
+      dockerfile: Dockerfile
+    container_name: pos_frontend
+    ports:
+      - "3000:80"
+
+volumes:
+  sql_data:

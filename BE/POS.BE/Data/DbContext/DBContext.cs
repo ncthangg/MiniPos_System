@@ -25,7 +25,12 @@ public partial class DBContext : DbContext
 
     private string? GetConnectionString()
     {
-        IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../API")).AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build();
+        var configuration = new ConfigurationBuilder()
+               .SetBasePath(AppContext.BaseDirectory)
+               .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+               .Build();
+
+
         return configuration["ConnectionStrings:DefaultConnection"];
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(GetConnectionString());

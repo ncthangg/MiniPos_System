@@ -43,12 +43,12 @@ namespace API.DependencyInjection
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", policy =>
+                options.AddPolicy("CorsPolicy", builder =>
                 {
-                    policy.WithOrigins("http://localhost:5173")
-                          .AllowAnyMethod()
-                          .AllowAnyHeader()
-                          .AllowCredentials();
+                    builder.WithOrigins("https://localhost:5173", "http://localhost:5173", "https://localhost:3000", "http://localhost:3000")
+                           .AllowAnyMethod()
+                           .AllowAnyHeader()
+                           .AllowCredentials();
                 });
             });
         }

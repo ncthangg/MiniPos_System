@@ -3,48 +3,8 @@
   "WorkspaceRootPath": "E:\\MyProjects\\visnam\\BE\\POS.BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|e:\\myprojects\\visnam\\be\\pos.be\\data\\seeddata\\products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|solutionrelative:data\\seeddata\\products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|e:\\myprojects\\visnam\\be\\pos.be\\data\\seeddata\\productseeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|solutionrelative:data\\seeddata\\productseeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|e:\\myprojects\\visnam\\be\\pos.be\\data\\dbcontext\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B2611F4-894C-4661-9A56-6773CCBCC3E4}|Data\\Data.csproj|solutionrelative:data\\dbcontext\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|solutionrelative:api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B02AAE7-4422-46E0-972C-ACF29EF1A2C8}|Service\\Service.csproj|e:\\myprojects\\visnam\\be\\pos.be\\service\\iservice\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B02AAE7-4422-46E0-972C-ACF29EF1A2C8}|Service\\Service.csproj|solutionrelative:service\\iservice\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{866F49B1-F694-4403-A535-D03CC8FB54B9}|Shared\\Shared.csproj|e:\\myprojects\\visnam\\be\\pos.be\\shared\\dtos\\res\\getorderres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{866F49B1-F694-4403-A535-D03CC8FB54B9}|Shared\\Shared.csproj|solutionrelative:shared\\dtos\\res\\getorderres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|solutionrelative:api\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{866F49B1-F694-4403-A535-D03CC8FB54B9}|Shared\\Shared.csproj|e:\\myprojects\\visnam\\be\\pos.be\\shared\\dtos\\req\\postorderreq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{866F49B1-F694-4403-A535-D03CC8FB54B9}|Shared\\Shared.csproj|solutionrelative:shared\\dtos\\req\\postorderreq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B02AAE7-4422-46E0-972C-ACF29EF1A2C8}|Service\\Service.csproj|e:\\myprojects\\visnam\\be\\pos.be\\service\\signalr\\signalrdispatcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B02AAE7-4422-46E0-972C-ACF29EF1A2C8}|Service\\Service.csproj|solutionrelative:service\\signalr\\signalrdispatcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C3D8D3B-1482-44FF-9F3D-767B39353C72}|API\\API.csproj|e:\\myprojects\\visnam\\be\\pos.be\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -58,8 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 882,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-19T14:34:38.386Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-19T14:38:25.521Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -71,168 +59,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\OrdersController.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "API\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:56:47.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "API\\appsettings.json",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\appsettings.json",
-              "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-19T03:02:59.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:47:38.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T16:17:17.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SignalRDispatcherService.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Service\\SignalR\\SignalRDispatcherService.cs",
-              "RelativeDocumentMoniker": "Service\\SignalR\\SignalRDispatcherService.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Service\\SignalR\\SignalRDispatcherService.cs",
-              "RelativeToolTip": "Service\\SignalR\\SignalRDispatcherService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:23:58.557Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1064,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductSeedDto.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\SeedData\\ProductSeedDto.cs",
-              "RelativeDocumentMoniker": "Data\\SeedData\\ProductSeedDto.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\SeedData\\ProductSeedDto.cs",
-              "RelativeToolTip": "Data\\SeedData\\ProductSeedDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T11:01:09.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\DbContext\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "Data\\DbContext\\DbInitializer.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\DbContext\\DbInitializer.cs",
-              "RelativeToolTip": "Data\\DbContext\\DbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T11:00:49.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "products.json",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\SeedData\\products.json",
-              "RelativeDocumentMoniker": "Data\\SeedData\\products.json",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Data\\SeedData\\products.json",
-              "RelativeToolTip": "Data\\SeedData\\products.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-19T10:29:12.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Service\\IService\\IOrderService.cs",
-              "RelativeDocumentMoniker": "Service\\IService\\IOrderService.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Service\\IService\\IOrderService.cs",
-              "RelativeToolTip": "Service\\IService\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:58:50.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "API\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\API\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "API\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T08:03:20.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetOrderRes.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Shared\\DTOs\\Res\\GetOrderRes.cs",
-              "RelativeDocumentMoniker": "Shared\\DTOs\\Res\\GetOrderRes.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Shared\\DTOs\\Res\\GetOrderRes.cs",
-              "RelativeToolTip": "Shared\\DTOs\\Res\\GetOrderRes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T09:12:53.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PostOrderReq.cs",
-              "DocumentMoniker": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Shared\\DTOs\\Req\\PostOrderReq.cs",
-              "RelativeDocumentMoniker": "Shared\\DTOs\\Req\\PostOrderReq.cs",
-              "ToolTip": "E:\\MyProjects\\visnam\\BE\\POS.BE\\Shared\\DTOs\\Req\\PostOrderReq.cs",
-              "RelativeToolTip": "Shared\\DTOs\\Req\\PostOrderReq.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T01:13:58.322Z",
-              "EditorCaption": ""
             }
           ]
         }
