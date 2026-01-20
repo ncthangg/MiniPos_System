@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { OrderItem } from "../Items/OrderItem";
 import type { GetOrderRes } from "../../models";
 import type { OrderFilters, OrderPagination } from "../../models";
@@ -27,6 +27,29 @@ export const OrderList: React.FC<OrderListProps> = ({
 }) => {
   const [searchInput, setSearchInput] = useState(orderFilters.searchValue);
   const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isUserTypingRef = useRef(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const wasFocusedRef = useRef(false);
+
+  // Sync searchInput with orderFilters.searchValue only when it changes externally (not from user input)
+  useEffect(() => {
+    // Only update if the change comes from external source (not from user typing)
+    if (!isUserTypingRef.current && orderFilters.searchValue !== searchInput) {
+      setSearchInput(orderFilters.searchValue);
+    }
+    // Reset the flag after processing
+    isUserTypingRef.current = false;
+  }, [orderFilters.searchValue]);
+
+  // Restore focus after re-render if input was focused before
+  useEffect(() => {
+    if (wasFocusedRef.current && inputRef.current && document.activeElement !== inputRef.current) {
+      inputRef.current.focus();
+      // Restore cursor position to the end
+      const length = inputRef.current.value.length;
+      inputRef.current.setSelectionRange(length, length);
+    }
+  }, [orders, isLoadingOrders]);
 
   //#region render 
   if (isLoading) {
@@ -65,11 +88,15 @@ export const OrderList: React.FC<OrderListProps> = ({
         backgroundColor: "#f9fafb"
       }}>
         <input
+          ref={inputRef}
           type="text"
           placeholder="Tìm kiếm đơn hàng..."
           value={searchInput}
           onChange={(e) => {
             const value = e.target.value;
+            
+            // Mark that user is typing to prevent external sync
+            isUserTypingRef.current = true;
             setSearchInput(value);
             
             // Clear previous timeout
@@ -91,8 +118,14 @@ export const OrderList: React.FC<OrderListProps> = ({
             outline: "none",
             transition: "border-color 0.2s"
           }}
-          onFocus={(e) => e.target.style.borderColor = "#3b82f6"}
-          onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
+          onFocus={(e) => {
+            wasFocusedRef.current = true;
+            e.target.style.borderColor = "#3b82f6";
+          }}
+          onBlur={(e) => {
+            wasFocusedRef.current = false;
+            e.target.style.borderColor = "#d1d5db";
+          }}
         />
       </div>
       
